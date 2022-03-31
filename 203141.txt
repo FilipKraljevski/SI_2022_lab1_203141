@@ -1,0 +1,115 @@
+4. git clone https://github.com/FilipKraljevski/SI_2022_lab1_203141.git -> го клонираме репото локално
+   cd SI_2022_lab1_203141 -> велгуваме во фолдерот кој се креираше со клонирањето
+5. echo > shopping_list.txt -> креираме текстуален фајл и влегува во untracked
+   git add shopping_list.txt -> го додаваме во staging
+   git commit -m "Add 5 items to the shopping list" -> го комитираме со порака
+6. git add shopping_list.txt
+   git commit -m "Add quantities to the items."
+7. git branch branch1 -> креираме нов бранч
+   git branch branhc2 
+8. commit 7541aa0d0b27aac924b2dd6b5f87aeb6170472a9 (HEAD -> master, branch2, branch1)
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 14:58:52 2022 +0200
+
+    Add quantities to the items.
+
+commit 064cc6c80061d8392177a5babebcd4737ab562a5
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 14:55:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 40f99dc9d38cc37e86f45378e1037e276229e74f (origin/master, origin/HEAD)
+Author: FilipKraljevski <86956087+FilipKraljevski@users.noreply.github.com>
+Date:   Thu Mar 31 14:26:42 2022 +0200
+
+    Update README.md
+
+commit 5e4b13044cf42eae7fad4e35d1e29315e361915f
+Author: FilipKraljevski <86956087+FilipKraljevski@users.noreply.github.com>
+Date:   Thu Mar 31 14:25:42 2022 +0200
+
+    Initial commit
+9. git push origin master -> го синхронизирам со репото
+   git push origin branch1
+   git push origin branch2
+10. git checkout branch1 -> се префрламе на branc1
+11. git add shopping_list.txt
+    git commit -m "Change quantity of item #5"
+12. git checkout master
+13. git add shopping_list.txt
+    git commit -m "Change quantity of item #2"
+14. git push origin master
+    git push origin branch1
+    git push origin branch2
+15. git checkout branch2
+16. git add shopping_list.txt
+    git commit -m "Modify item #4"
+17. git log
+commit 16dcffb4127d8da9222cd3dac9edb31f018a99bc (HEAD -> branch2)
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 15:42:58 2022 +0200
+
+    Modify item #4
+
+commit 7541aa0d0b27aac924b2dd6b5f87aeb6170472a9 (origin/branch2)
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 14:58:52 2022 +0200
+
+    Add quantities to the items.
+
+commit 064cc6c80061d8392177a5babebcd4737ab562a5
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 14:55:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 40f99dc9d38cc37e86f45378e1037e276229e74f
+Author: FilipKraljevski <86956087+FilipKraljevski@users.noreply.github.com>
+Date:   Thu Mar 31 14:26:42 2022 +0200
+
+    Update README.md
+
+commit 5e4b13044cf42eae7fad4e35d1e29315e361915f
+Author: FilipKraljevski <86956087+FilipKraljevski@users.noreply.github.com>
+Date:   Thu Mar 31 14:25:42 2022 +0200
+
+    Initial commit
+18. git reset --soft HEAD^ -> се враќаме еден комит поназад
+    git add shopping_list.txt
+    git commit -m "Modify item #4 and add item #6"
+19. git log
+commit 9736bd50218c35835279514c234c60fdb5b7f67b (HEAD -> branch2)
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 16:00:00 2022 +0200
+
+    Modify item #4 and add item #6
+
+commit 7541aa0d0b27aac924b2dd6b5f87aeb6170472a9 (origin/branch2)
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 14:58:52 2022 +0200
+
+    Add quantities to the items.
+
+commit 064cc6c80061d8392177a5babebcd4737ab562a5
+Author: Filip Kraljevski <filipce001@gmail.com>
+Date:   Thu Mar 31 14:55:12 2022 +0200
+
+    Add 5 items to the shopping list
+
+commit 40f99dc9d38cc37e86f45378e1037e276229e74f
+Author: FilipKraljevski <86956087+FilipKraljevski@users.noreply.github.com>
+Date:   Thu Mar 31 14:26:42 2022 +0200
+
+    Update README.md
+
+commit 5e4b13044cf42eae7fad4e35d1e29315e361915f
+Author: FilipKraljevski <86956087+FilipKraljevski@users.noreply.github.com>
+Date:   Thu Mar 31 14:25:42 2022 +0200
+
+    Initial commit
+20. git checkout master
+    git merge branch1 -> не се појавува конфликт, се појавува едитор, ја избираме командада :wq, 
+    ќе се случи спојување според рекурзивната стратегија
+21. git merge branch2 -> се појавува конфликт, го решавам со правење на комбинација во нов комит во мастер, потоа се случува спојување 
+    со рекурзивнастратегија
