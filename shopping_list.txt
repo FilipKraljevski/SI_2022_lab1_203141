@@ -1,5 +1,12 @@
 Voda x 1
 Leb x 3
 Sol x 2
-Mleko x 2
+<<<<<<< HEAD
+Caj x 2
 Kaskaval x 5
+pecenica x 3
+=======
+Caj x 2
+Kaskaval x 5
+pecenica x 3
+>>>>>>> branch2
